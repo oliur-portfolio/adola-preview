@@ -104,12 +104,6 @@ h6 {
 
 /* Default CSS Code */
 
-/* 
-
-font-family: "Kanit", sans-serif;
-
-*/
-
 body {
   font-family: "Kanit", sans-serif;
   font-size: 14px;
@@ -143,6 +137,7 @@ body {
 }
 
 .header__logo {
+  display: block;
   width: 100%;
   max-width: 250px;
   margin-left: auto;
@@ -306,6 +301,12 @@ body {
   -webkit-text-stroke: 1px #720000;
   text-stroke: 1px #720000;
   text-shadow: 2.5px 0px 0px rgba(114, 0, 0, 1);
+}
+
+.custom__text--shadow-md {
+  font-size: 32px;
+  line-height: 1.2;
+  text-shadow: 4.5px 0px 0px rgba(114, 0, 0, 1);
 }
 
 .about__select-nav img {
@@ -566,9 +567,23 @@ body {
 /* Laboratory Area */
 
 .laboratory {
+  position: relative;
   background: #99f3ff;
   color: #720000;
-  padding-bottom: 60px;
+  padding-bottom: 250px;
+}
+
+.laboratory::after {
+  content: "";
+  position: absolute;
+  bottom: -25px;
+  left: 0;
+  width: 100%;
+  height: 130px;
+  z-index: 6;
+  background: url(../images/sky-curve.svg);
+  background-size: contain;
+  background-position: center center;
 }
 
 .laboratory-clouds {
@@ -582,6 +597,7 @@ body {
 }
 
 .laboratory__items {
+  position: relative;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   column-gap: 35px;
@@ -590,6 +606,7 @@ body {
   max-width: 335px;
   margin-left: auto;
   margin-right: auto;
+  z-index: 99;
 }
 
 .laboratory__item {
@@ -619,7 +636,238 @@ body {
   line-height: 1;
 }
 
+.laboratory__hero {
+  position: absolute;
+  width: 100%;
+  bottom: -90px;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  z-index: 999;
+}
+
+.about__box--purple {
+  width: 100%;
+}
+
+.laboratory__hero h3 {
+  text-align: center;
+}
+
+.laboratory__hero .about__box-content {
+  padding: 10px 20px;
+  border-radius: 22px;
+  -webkit-border-radius: 22px;
+  -moz-border-radius: 22px;
+  -ms-border-radius: 22px;
+  -o-border-radius: 22px;
+}
+
+.laboratory__hero .about__box-layer {
+  border-radius: 26px;
+  -webkit-border-radius: 26px;
+  -moz-border-radius: 26px;
+  -ms-border-radius: 26px;
+  -o-border-radius: 26px;
+}
+
+.laboratory__hero img {
+  width: 220px;
+  height: auto;
+  object-fit: contain;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  z-index: 9;
+}
+
 /* Laboratory Area */
+
+/* Faq Area */
+
+.faq-area {
+  position: relative;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background: rgb(68, 172, 253);
+  background: linear-gradient(
+    180deg,
+    rgba(68, 172, 253, 1) 0%,
+    rgba(80, 197, 255, 1) 25%
+  );
+}
+
+.basic-accordion {
+  max-width: 800px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.basic-accordion__item {
+  position: relative;
+  color: #720000;
+  border-radius: 16px;
+  -webkit-border-radius: 16px;
+  -moz-border-radius: 16px;
+  -ms-border-radius: 16px;
+  -o-border-radius: 16px;
+}
+
+.basic-accordion__item .accordion__question-content,
+.basic-accordion__item .accordion__answer-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  padding-left: 40px;
+  background: #fff;
+  border: 3px solid #720000;
+  border-radius: 16px;
+  -webkit-border-radius: 16px;
+  -moz-border-radius: 16px;
+  -ms-border-radius: 16px;
+  -o-border-radius: 16px;
+}
+
+.basic-accordion__item .accordion__answer-content {
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 15px;
+  padding: 20px;
+  padding-top: 100px;
+}
+
+.accordion__question-content h3 {
+  color: #720000;
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+.accordion__answer-content p {
+  color: #720000;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.basic-accordion .about__box--yellow .about__box-content {
+  padding: 9px;
+}
+
+.accordion__arrow-area {
+  width: 45px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffc033;
+  border: 3px solid #720000;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+}
+
+.accordion__arrow {
+  width: 18px;
+  height: auto;
+  object-fit: contain;
+  transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+}
+
+.accordion__question.active .accordion__arrow {
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+}
+
+.basic-accordion__item .accordion__answer {
+  width: 85%;
+  margin-left: auto;
+  position: relative;
+  margin-top: -90px;
+  z-index: 5;
+}
+
+.accordion__answer {
+  display: none;
+}
+
+/* Faq Area */
+
+/* Footer Area */
+.footer-area {
+  position: relative;
+  padding-top: 60px;
+  padding-bottom: 20px;
+}
+
+.footer-area::before {
+  content: "";
+  position: absolute;
+  top: -40px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background: url("../images/white-curve.svg");
+  background-repeat: repeat-x;
+}
+
+.footer-area .container {
+  position: relative;
+  z-index: 50;
+}
+
+.footer {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+.footer__logo a {
+  width: 100px;
+}
+
+.footer__logo p {
+  font-size: 12px;
+  color: #005bb5;
+  font-weight: 600;
+}
+
+.footer__content {
+  width: 100%;
+  max-width: 300px;
+}
+
+.footer__content p {
+  color: #7caad1;
+  font-size: 10px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.footer__content p:last-of-type {
+  margin-bottom: 0;
+}
+
+/* Footer Area */
 
 /* body {
   font-family: "Kanit", sans-serif;
