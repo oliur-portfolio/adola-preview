@@ -21,6 +21,10 @@
     />
 
     <!-- Custom CSS File -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css"
+    />
     <link rel="stylesheet" href="css/main.css" />
 
     <meta name="theme-color" content="#fafafa" />
@@ -63,11 +67,11 @@
 
               <div class="about__box-content">
                 <div class="about__box-heading">
-                  <h2>ABOUT ADOLA</h2>
+                  <h2 class="heading1">ABOUT ADOLA</h2>
                 </div>
 
                 <div class="about__box-descs">
-                  <p>
+                  <p class="desc1">
                     Nice to meet you Humans. There are 8,112,086,189 of us as of
                     29 May 2024, and I'm Adola, the first of our kind. In your
                     world, I would be closest to your Adam. Throughout the
@@ -78,14 +82,14 @@
                     fit the human anatomy.
                   </p>
 
-                  <p>
+                  <p class="desc1">
                     For leisure, while some humans indulge themselves in liquor,
                     we turn to the art of music despite our lack of vocal
                     chords. Our most famous piece has been closely linked to the
                     sound of a muted trumpet in your world.
                   </p>
 
-                  <p>
+                  <p class="desc1">
                     Like humans, we also have our fair share of challenges. We
                     battled in wars, the Great Mucus and Yeast War. Armed with
                     our grooves and folds, mastering the art of squeezes and
@@ -94,7 +98,7 @@
                     too Mawsynram wet.
                   </p>
 
-                  <p>
+                  <p class="desc1">
                     We are proud to say that we won and persevered. Through
                     various evolutions and the ever-improving Science and
                     Asnology, we advanced. Today, not only are we masters of our
@@ -103,7 +107,7 @@
                     at a time.
                   </p>
 
-                  <p>
+                  <p class="desc1">
                     Much like your diverse cultures and races, we are divided
                     into 2 main essnicities - the Pepto Bismuls and the Tobler
                     Onis. The prior is known for their pink hue lip, while the
@@ -133,7 +137,7 @@
                   alt=""
                 />
 
-                <h3 class="custom__text--shadow">PEPTO BISMUL</h3>
+                <h3 class="custom__text--shadow heading3">PEPTO BISMUL</h3>
 
                 <div class="about__select-loading">
                   <div class="about__select-loading-bar">
@@ -160,7 +164,7 @@
                   </button>
                 </div>
 
-                <h5 class="custom__text--shadow">Which is you?</h5>
+                <h5 class="custom__text--shadow heading3">Which is you?</h5>
               </div>
 
               <button class="about__select-btn about__select-btn--tobler">
@@ -171,7 +175,7 @@
                   alt=""
                 />
 
-                <h3 class="custom__text--shadow">TOBLER ONI</h3>
+                <h3 class="custom__text--shadow heading3">TOBLER ONI</h3>
 
                 <div class="about__select-loading">
                   <div class="about__select-loading-bar">
@@ -214,13 +218,18 @@
               <div class="about__box-layer"></div>
               <div class="about__box-content">
                 <div class="tokenomics__input-area">
-                  <input class="input__style" type="text" />
-                  <button class="input__btn">COPY</button>
+                  <input id="inputBox" class="input__style" type="text" />
+                  <button
+                    class="input__btn copy-button"
+                    data-clipboard-target="#inputBox"
+                  >
+                    COPY
+                  </button>
                 </div>
               </div>
             </div>
 
-            <h3 class="custom__text--shadow">CONTRACT ADDRESS</h3>
+            <h3 class="custom__text--shadow heading3">CONTRACT ADDRESS</h3>
           </div>
         </div>
       </section>
@@ -237,8 +246,8 @@
               <img src="images/laboratory-1.svg" alt="" />
 
               <div class="laboratory__item-content">
-                <h3>TAXES</h3>
-                <p>0/0</p>
+                <h3 class="heading6">TAXES</h3>
+                <p class="desc4">0/0</p>
               </div>
             </div>
             <!-- Single Item -->
@@ -248,8 +257,8 @@
               <img src="images/laboratory-2.svg" alt="" />
 
               <div class="laboratory__item-content">
-                <h3>MINT & FREEZE</h3>
-                <p>REVOKED</p>
+                <h3 class="heading6">MINT & FREEZE</h3>
+                <p class="desc4">REVOKED</p>
               </div>
             </div>
             <!-- Single Item -->
@@ -259,8 +268,8 @@
               <img src="images/laboratory-3.svg" alt="" />
 
               <div class="laboratory__item-content">
-                <h3>LIQUIDITY</h3>
-                <p>BURNED</p>
+                <h3 class="heading6">LIQUIDITY</h3>
+                <p class="desc4">BURNED</p>
               </div>
             </div>
             <!-- Single Item -->
@@ -270,8 +279,8 @@
               <img src="images/laboratory-4.svg" alt="" />
 
               <div class="laboratory__item-content">
-                <h3>TOTAL SUPPLY</h3>
-                <p>8,112,086,189</p>
+                <h3 class="heading6">TOTAL SUPPLY</h3>
+                <p class="desc4">8,112,086,189</p>
               </div>
             </div>
             <!-- Single Item -->
@@ -282,7 +291,10 @@
               <div class="about__box about__box--purple">
                 <div class="about__box-layer"></div>
                 <div class="about__box-content">
-                  <h3 class="custom__text--shadow custom__text--shadow-md">
+                  <div class="laboratory__heading-circle"></div>
+                  <h3
+                    class="custom__text--shadow custom__text--shadow-md heading4"
+                  >
                     LABORATORY
                   </h3>
                 </div>
@@ -306,7 +318,7 @@
                   <div class="about__box-layer"></div>
                   <div class="about__box-content">
                     <a href="#" class="accordion__question-content">
-                      <h3>WHO IS ADOLA ?</h3>
+                      <h3 class="heading5">WHAT CHAIN IS ADOLA ON ?</h3>
 
                       <div class="accordion__arrow-area">
                         <img
@@ -351,7 +363,7 @@
                   <div class="about__box-layer"></div>
                   <div class="about__box-content">
                     <a href="#" class="accordion__question-content">
-                      <h3>WHO IS ADOLA ?</h3>
+                      <h3 class="heading5">WHAT CHAIN IS ADOLA ON ?</h3>
 
                       <div class="accordion__arrow-area">
                         <img
@@ -406,19 +418,19 @@
               <img src="images/footer-logo.svg" alt="logo" />
             </a>
 
-            <p>© 2024 ADOLA</p>
+            <p class="desc2">© 2024 ADOLA</p>
           </div>
 
           <div class="footer__content">
-            <p>DISCLAIMER</p>
+            <p class="desc3">DISCLAIMER</p>
 
-            <p>
+            <p class="desc3">
               $ADOLA IS MADE FOR A FAN AND HAS NO VALUE. DON’T RISK MONEY YOU
               ARE AFRAID OF LOSING. THE PRICE MAY GO UP OR IT MAY GO DOWN. WE
               ARE NOT RESPONSIBLE FOR THE PRICE OF THE TOKEN.
             </p>
 
-            <p>$ADOLA ON SOLANA.</p>
+            <p class="desc3">$ADOLA ON SOLANA.</p>
           </div>
         </div>
       </div>
@@ -427,6 +439,8 @@
 
     <!-- JS CDN Link -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script src="js/clipboard.min.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
