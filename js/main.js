@@ -1,9 +1,9 @@
 // Vote Api
 document.addEventListener("DOMContentLoaded", function () {
-  const customCookie = true; // Replace with actual cookie check
+  const customCookie = false; // Replace with actual cookie check
 
   async function getVotes() {
-    const response = await fetch("http://adola.io/getvote.php");
+    const response = await fetch("https://adola.io/getvote.php");
     const result = await response.text();
     updatePercentages(result);
   }
@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
     aboutSelect.classList.add("about__select--loading");
     setLoading(true); // Show loading text
 
-    const response = await fetch(`http://adola.io/sendvote.php?vote=${vote}`, {
+    const response = await fetch(`https://adola.io/sendvote.php?vote=${vote}`, {
       method: "POST",
     });
     const result = await response.text();
