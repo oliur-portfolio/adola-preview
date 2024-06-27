@@ -456,13 +456,13 @@ body {
   -o-border-radius: 100px;
 }
 
-.about__select-loading-bar-value--pepto {
+/* .about__select-loading-bar-value--pepto {
   width: 50%;
 }
 
 .about__select-loading-bar-value--tobler {
   width: 20%;
-}
+} */
 
 .about__select-loading-bar-value--pepto .about__select-loading-bar-value-main {
   background: #fc85ff;

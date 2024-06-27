@@ -1,6 +1,6 @@
 // Vote Api
 document.addEventListener("DOMContentLoaded", function () {
-  const customCookie = false; // Replace with actual cookie check
+  let customCookie = false;
 
   async function getVotes() {
     const response = await fetch("https://adola.io/getvote.php");
@@ -19,13 +19,22 @@ document.addEventListener("DOMContentLoaded", function () {
     const result = await response.text();
     updatePercentages(result);
 
-    setLoading(false); // Hide loading text
+    setLoading(false);
+    customCookie = true;
   }
 
   function updatePercentages(result) {
     const [left, right] = result.split(":");
     document.getElementById("left-percentage").textContent = `${left}%`;
     document.getElementById("right-percentage").textContent = `${right}%`;
+
+    // Update the widths of the progress bars
+    document.querySelector(
+      ".about__select-loading-bar-value--pepto"
+    ).style.width = `${left}%`;
+    document.querySelector(
+      ".about__select-loading-bar-value--tobler"
+    ).style.width = `${right}%`;
   }
 
   function setLoading(isLoading) {
@@ -40,14 +49,24 @@ document.addEventListener("DOMContentLoaded", function () {
   const voteLeftBtn = document.getElementById("vote-left");
   const voteRightBtn = document.getElementById("vote-right");
 
-  voteLeftBtn.addEventListener("click", () => sendVote("left"));
-  voteRightBtn.addEventListener("click", () => sendVote("right"));
+  voteLeftBtn.addEventListener("click", () => {
+    if (!customCookie) {
+      sendVote("left");
+    }
+  });
+  voteRightBtn.addEventListener("click", () => {
+    if (!customCookie) {
+      sendVote("right");
+    }
+  });
 
   const aboutSelect = document.querySelector(".about__select");
 
   if (customCookie) {
     setLoading(true); // Show loading text
-    getVotes().then(() => setLoading(false)); // Hide loading text after fetching
+    getVotes().then(() => {
+      setLoading(false);
+    });
     aboutSelect.classList.add("about__select--loading");
   } else {
     aboutSelect.classList.remove("about__select--loading");
