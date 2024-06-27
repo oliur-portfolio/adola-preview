@@ -35,13 +35,13 @@
     <header class="header">
       <div class="container">
         <div class="header__btns">
-          <button class="header__btn">
+          <a href="https://www.google.com/" target="_blank" class="header__btn">
             <img src="images/send-btn.svg" alt="send" />
-          </button>
+          </a>
 
-          <button class="header__btn">
+          <a href="https://www.google.com/" target="_blank" class="header__btn">
             <img src="images/x-btn.svg" alt="x button" />
-          </button>
+          </a>
         </div>
 
         <a href="#" class="header__logo">
@@ -128,8 +128,15 @@
               </div>
             </div>
 
-            <div class="about__select about__select--loading">
-              <button class="about__select-btn about__select-btn--pepto">
+            <div class="about__select">
+              <h5 class="custom__text--shadow heading3 about__select-text">
+                Which is you?
+              </h5>
+
+              <button
+                class="about__select-btn about__select-btn--pepto"
+                id="vote-left"
+              >
                 <img src="images/pepto.svg" alt="pepto" />
                 <img
                   class="pepto-loading-layer"
@@ -149,25 +156,22 @@
                     </div>
                   </div>
 
-                  <h4>50%</h4>
+                  <h4 id="left-percentage">Loading...</h4>
                 </div>
               </button>
 
-              <div class="about__select-nav-area">
-                <div class="about__select-nav">
-                  <button class="about__select-nav-left">
-                    <img src="images/about-nav-left.svg" alt="" />
-                  </button>
+              <button class="about__select-nav about__select-nav-left">
+                <img src="images/about-nav-left.svg" alt="" />
+              </button>
 
-                  <button class="about__select-nav-right">
-                    <img src="images/about-nav-right.svg" alt="" />
-                  </button>
-                </div>
+              <button class="about__select-nav about__select-nav-right">
+                <img src="images/about-nav-right.svg" alt="" />
+              </button>
 
-                <h5 class="custom__text--shadow heading3">Which is you?</h5>
-              </div>
-
-              <button class="about__select-btn about__select-btn--tobler">
+              <button
+                class="about__select-btn about__select-btn--tobler"
+                id="vote-right"
+              >
                 <img src="images/tobler.svg" alt="pepto" />
                 <img
                   class="tobler-loading-layer"
@@ -187,7 +191,7 @@
                     </div>
                   </div>
 
-                  <h4>20%</h4>
+                  <h4 id="right-percentage">Loading...</h4>
                 </div>
               </button>
             </div>
@@ -202,7 +206,21 @@
               </div>
 
               <div class="available__tools">
-                <img src="images/available-tools.svg" alt="tools" />
+                <a
+                  href="https://www.google.com/"
+                  target="_blank"
+                  class="available__tool"
+                >
+                  <img src="images/raydium.svg" alt="tools" />
+                </a>
+
+                <a
+                  href="https://www.google.com/"
+                  target="_blank"
+                  class="available__tool"
+                >
+                  <img src="images/dextools.svg" alt="tools" />
+                </a>
               </div>
             </div>
           </div>
@@ -218,7 +236,13 @@
               <div class="about__box-layer"></div>
               <div class="about__box-content">
                 <div class="tokenomics__input-area">
-                  <input id="inputBox" class="input__style" type="text" />
+                  <input
+                    id="inputBox"
+                    class="input__style"
+                    type="text"
+                    value="uhiduhaauysdgfkasgftuygdsbnfygruyfghrsyuhfyds"
+                    readonly
+                  />
                   <button
                     class="input__btn copy-button"
                     data-clipboard-target="#inputBox"
